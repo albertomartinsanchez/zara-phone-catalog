@@ -43,3 +43,13 @@
     padding-top: 24px;
   }
 }
+
+@media (max-width: 600px) {
+  .phone-list__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-list {
+    padding-top: 24px;
+  }
+}

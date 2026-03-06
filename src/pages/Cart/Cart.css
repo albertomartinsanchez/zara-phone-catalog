@@ -98,3 +98,18 @@
     justify-content: space-between;
   }
 }
+
+@media (max-width: 600px) {
+  .cart__title {
+    font-size: 20px;
+  }
+
+  .cart__list {
+    padding-top: 24px;
+    padding-bottom: 0;
+  }
+
+  .cart__footer {
+    padding: 16px var(--page-padding) 24px;
+  }
+}

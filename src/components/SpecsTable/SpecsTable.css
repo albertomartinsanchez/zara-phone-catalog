@@ -32,3 +32,10 @@
   width: 300px;
   padding-right: 48px;
 }
+
+@media (max-width: 600px) {
+  .specs-table__key {
+    width: 150px;
+    padding-right: 12px;
+  }
+}

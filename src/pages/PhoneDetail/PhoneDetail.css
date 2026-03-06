@@ -155,6 +155,41 @@
   }
 }
 
+@media (max-width: 600px) {
+  .detail__main {
+    gap: 40px;
+  }
+
+  .detail__image {
+    width: 260px;
+    height: 273px;
+  }
+
+  .detail__info {
+    gap: 40px;
+  }
+
+  .detail__name {
+    font-size: 20px;
+  }
+
+  .detail__price {
+    font-size: 14px;
+  }
+
+  .detail__selectors {
+    gap: 32px;
+  }
+
+  .detail__add-to-cart {
+    height: 48px;
+  }
+
+  .detail__similar-carousel li {
+    flex: 0 0 344px;
+  }
+}
+
 .detail__brand {
   font-size: 10px;
   font-weight: 300;

@@ -75,3 +75,19 @@
     padding: 16px 0;
   }
 }
+
+@media (max-width: 600px) {
+  .cart-item {
+    gap: 24px;
+  }
+
+  .cart-item__image {
+    width: 160px;
+    height: 198px;
+  }
+
+  .cart-item__details {
+    height: 198px;
+    padding: 40px 0;
+  }
+}

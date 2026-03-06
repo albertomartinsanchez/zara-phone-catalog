@@ -55,6 +55,6 @@ button {
 
 @media (max-width: 600px) {
   :root {
-    --page-padding: 24px;
+    --page-padding: 16px;
   }
 }
