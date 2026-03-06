@@ -82,6 +82,21 @@
   font-weight: 300;
 }
 
+@media (max-width: 900px) {
+  .cart__title {
+    font-size: 20px;
+  }
+
+  .cart__continue {
+    width: 200px;
+    height: 48px;
+  }
+
+  .cart__footer {
+    padding-bottom: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .cart__footer {
     flex-direction: column;

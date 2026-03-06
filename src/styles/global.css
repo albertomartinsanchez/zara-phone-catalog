@@ -49,7 +49,7 @@ button {
 
 @media (max-width: 1024px) {
   :root {
-    --page-padding: 48px;
+    --page-padding: 40px;
   }
 }
 
