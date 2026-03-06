@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { usePhone } from '../../hooks/usePhone'
 import { useCart } from '../../context/CartContext'
@@ -14,6 +14,11 @@ export default function PhoneDetail() {
 
   const [selectedColor, setSelectedColor] = useState(null)
   const [selectedStorage, setSelectedStorage] = useState(null)
+
+  useEffect(() => {
+    setSelectedColor(null)
+    setSelectedStorage(null)
+  }, [id])
 
   if (loading) return <p className="detail__status">Loading...</p>
   if (error) return <p className="detail__status detail__status--error">Phone not found.</p>
