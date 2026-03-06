@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { usePhones } from '../../hooks/usePhones'
 import PhoneCard from '../../components/PhoneCard/PhoneCard'
 import SearchBar from '../../components/SearchBar/SearchBar'
+import './PhoneList.css'
 
 export default function PhoneList() {
   const [search, setSearch] = useState('')

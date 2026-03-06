@@ -1,19 +1,41 @@
+.color-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.color-selector__label {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
 .color-selector__options {
   display: flex;
-  gap: 8px;
+  flex-direction: row;
+  gap: 16px;
   flex-wrap: wrap;
-  margin-top: 8px;
 }
 
 .color-selector__swatch {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 2px solid transparent;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--color-border-light);
   cursor: pointer;
-  outline-offset: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .color-selector__swatch--active {
-  border-color: #000;
+  border-color: var(--black);
+}
+
+.color-selector__inner {
+  width: 20px;
+  height: 20px;
+  display: block;
 }

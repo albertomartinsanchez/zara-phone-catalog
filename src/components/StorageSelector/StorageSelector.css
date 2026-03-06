@@ -1,0 +1,49 @@
+.storage-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.storage-selector__label {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.storage-selector__options {
+  display: flex;
+  flex-direction: row;
+}
+
+.storage-selector__option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  height: 65px;
+  min-width: 95px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: var(--black);
+  border: 1px solid var(--color-border-light);
+  border-left: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.storage-selector__option:first-child {
+  border-left: 1px solid var(--color-border-light);
+}
+
+.storage-selector__option--active {
+  border-color: var(--black);
+  z-index: 1;
+  position: relative;
+}
+
+.storage-selector__option:first-child.storage-selector__option--active {
+  border-left-color: var(--black);
+}

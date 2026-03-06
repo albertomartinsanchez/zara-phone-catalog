@@ -1,3 +1,5 @@
+import './SpecsTable.css'
+
 const SPEC_LABELS = {
   screen: 'Screen',
   resolution: 'Resolution',
@@ -12,7 +14,7 @@ const SPEC_LABELS = {
 export default function SpecsTable({ specs }) {
   return (
     <table className="specs-table">
-      <caption className="specs-table__caption">Technical specifications</caption>
+      <caption className="specs-table__caption">Specifications</caption>
       <tbody>
         {Object.entries(specs).map(([key, value]) => (
           <tr key={key} className="specs-table__row">

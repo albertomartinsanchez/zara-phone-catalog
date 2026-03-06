@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--page-padding);
+  height: var(--navbar-height);
+  background: var(--white);
+  border-bottom: 1px solid var(--black);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar__logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.navbar__cart {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  color: var(--black);
+}
+
+.navbar__cart-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.navbar__cart-count {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1;
+}

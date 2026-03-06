@@ -1,0 +1,45 @@
+.phone-list {
+  padding-top: 48px;
+}
+
+.phone-list__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0 var(--page-padding);
+}
+
+.phone-list__grid li {
+  display: contents;
+}
+
+.phone-list__status {
+  padding: 48px var(--page-padding);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.phone-list__status--error {
+  color: var(--color-delete);
+}
+
+@media (max-width: 1400px) {
+  .phone-list__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .phone-list__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .phone-list__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .phone-list {
+    padding-top: 24px;
+  }
+}

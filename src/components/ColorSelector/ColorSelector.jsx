@@ -15,9 +15,10 @@ export default function ColorSelector({ options, selected, onChange }) {
             aria-checked={selected?.name === option.name}
             aria-label={option.name}
             className={`color-selector__swatch ${selected?.name === option.name ? 'color-selector__swatch--active' : ''}`}
-            style={{ backgroundColor: option.hexCode }}
             onClick={() => onChange(option)}
-          />
+          >
+            <span className="color-selector__inner" style={{ backgroundColor: option.hexCode }} />
+          </button>
         ))}
       </div>
     </div>

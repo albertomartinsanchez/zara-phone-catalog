@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { usePhone } from '../../hooks/usePhone'
 import { useCart } from '../../context/CartContext'
 import ColorSelector from '../../components/ColorSelector/ColorSelector'
 import StorageSelector from '../../components/StorageSelector/StorageSelector'
 import SpecsTable from '../../components/SpecsTable/SpecsTable'
 import PhoneCard from '../../components/PhoneCard/PhoneCard'
+import './PhoneDetail.css'
 
 export default function PhoneDetail() {
   const { id } = useParams()
@@ -42,63 +43,71 @@ export default function PhoneDetail() {
   }
 
   return (
-    <div className="detail">
-      <section className="detail__main">
-        <img
-          className="detail__image"
-          src={currentImage}
-          alt={`${phone.brand} ${phone.name} in ${selectedColor?.name ?? 'default color'}`}
-        />
+    <>
+      <Link to="/" className="detail__back">
+        ← Back
+      </Link>
 
-        <div className="detail__info">
-          <h1 className="detail__name">{phone.name}</h1>
-          <p className="detail__brand">{phone.brand}</p>
-          <p className="detail__price">{currentPrice} EUR</p>
-
-          <ColorSelector
-            options={phone.colorOptions}
-            selected={selectedColor}
-            onChange={setSelectedColor}
+      <div className="detail">
+        <section className="detail__main">
+          <img
+            className="detail__image"
+            src={currentImage}
+            alt={`${phone.brand} ${phone.name} in ${selectedColor?.name ?? 'default color'}`}
           />
 
-          <StorageSelector
-            options={phone.storageOptions}
-            selected={selectedStorage}
-            onChange={setSelectedStorage}
-          />
+          <div className="detail__info">
+            <div className="detail__title-group">
+              <p className="detail__brand">{phone.brand}</p>
+              <h1 className="detail__name">{phone.name}</h1>
+              <p className="detail__price">{currentPrice} EUR</p>
+            </div>
 
-          <button
-            className="detail__add-to-cart"
-            onClick={handleAddToCart}
-            disabled={!canAddToCart}
-            aria-label={
-              canAddToCart
-                ? `Add ${phone.name} to cart`
-                : 'Select color and storage to add to cart'
-            }
-          >
-            Add to cart
-          </button>
-        </div>
-      </section>
+            <div className="detail__selectors">
+              <StorageSelector
+                options={phone.storageOptions}
+                selected={selectedStorage}
+                onChange={setSelectedStorage}
+              />
+              <ColorSelector
+                options={phone.colorOptions}
+                selected={selectedColor}
+                onChange={setSelectedColor}
+              />
+            </div>
 
-      <section className="detail__specs">
-        <h2>Specifications</h2>
-        <SpecsTable specs={phone.specs} />
-      </section>
-
-      {phone.similarProducts?.length > 0 && (
-        <section className="detail__similar">
-          <h2>Similar products</h2>
-          <ul className="phone-list__grid">
-            {phone.similarProducts.map((p) => (
-              <li key={p.id}>
-                <PhoneCard {...p} />
-              </li>
-            ))}
-          </ul>
+            <button
+              className="detail__add-to-cart"
+              onClick={handleAddToCart}
+              disabled={!canAddToCart}
+              aria-label={
+                canAddToCart
+                  ? `Add ${phone.name} to cart`
+                  : 'Select color and storage to add to cart'
+              }
+            >
+              Add to cart
+            </button>
+          </div>
         </section>
-      )}
-    </div>
+
+        <section className="detail__specs">
+          <SpecsTable specs={phone.specs} />
+        </section>
+
+        {phone.similarProducts?.length > 0 && (
+          <section className="detail__similar">
+            <h2>Similar items</h2>
+            <ul className="detail__similar-carousel">
+              {phone.similarProducts.map((p) => (
+                <li key={p.id}>
+                  <PhoneCard {...p} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </div>
+    </>
   )
 }

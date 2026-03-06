@@ -1,0 +1,31 @@
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px var(--page-padding);
+  background: var(--white);
+}
+
+.search-bar__input {
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--black);
+  border: none;
+  border-bottom: 0.5px solid var(--black);
+  padding: 0 0 8px;
+  background: transparent;
+  outline: none;
+}
+
+.search-bar__input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.search-bar__count {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--black);
+}

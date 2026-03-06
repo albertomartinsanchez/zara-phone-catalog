@@ -1,4 +1,22 @@
-*, *::before, *::after {
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --color-brand: #79736d;
+  --color-border: #000000;
+  --color-border-light: #cccccc;
+  --color-placeholder: #aaaaaa;
+  --color-bg-dark: #1b1a18;
+  --color-delete: #df0000;
+  --color-cart-badge: #ec1d24;
+
+  --page-padding: 100px;
+  --navbar-height: 80px;
+  --content-max-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -6,4 +24,37 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  background: var(--white);
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --page-padding: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --page-padding: 24px;
+  }
 }

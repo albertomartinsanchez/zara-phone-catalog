@@ -1,0 +1,34 @@
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table__caption {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: var(--black);
+  text-align: left;
+  padding-bottom: 40px;
+}
+
+.specs-table__row:first-child .specs-table__key,
+.specs-table__row:first-child .specs-table__value {
+  border-top: 0.5px solid var(--black);
+}
+
+.specs-table__key,
+.specs-table__value {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--black);
+  padding: 16px 0;
+  border-bottom: 0.5px solid var(--black);
+  vertical-align: top;
+}
+
+.specs-table__key {
+  text-transform: uppercase;
+  width: 300px;
+  padding-right: 48px;
+}

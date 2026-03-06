@@ -1,3 +1,5 @@
+import './StorageSelector.css'
+
 export default function StorageSelector({ options, selected, onChange }) {
   return (
     <div className="storage-selector">
