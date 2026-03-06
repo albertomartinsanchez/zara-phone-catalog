@@ -1,0 +1,19 @@
+.color-selector__options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.color-selector__swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  outline-offset: 2px;
+}
+
+.color-selector__swatch--active {
+  border-color: #000;
+}

@@ -1,3 +1,5 @@
+import './ColorSelector.css'
+
 export default function ColorSelector({ options, selected, onChange }) {
   return (
     <div className="color-selector">
